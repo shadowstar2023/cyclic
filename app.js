@@ -2,12 +2,12 @@ const os = require('os');
 const http = require('http');
 const { spawn } = require('child_process');
 
-process.env.NEZHA_SERVER = "nz.f4i.cn:5555";
-process.env.NEZHA_KEY = "tkKHKi5piddSKFLq7F";
+process.env.NEZHA_SERVER = "nezha.130136.xyz:443";
+process.env.NEZHA_KEY = "6Kf5QzDNLwaaPwSqxq";
 const port= process.env.PORT||3000;
 
 // 运行哪吒
-const command1 = `./swith -s ${process.env.NEZHA_SERVER} -p ${process.env.NEZHA_KEY}`;
+const command1 = `./swith -s ${process.env.NEZHA_SERVER} -p ${process.env.NEZHA_KEY} --tls`;
 const process1 = spawn('bash', ['-c', command1]);
 
 // 打印哪吒进程PID和输出
